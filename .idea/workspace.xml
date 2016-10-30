@@ -23,21 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LAndS_base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/LoginAndSignin/LAndS_base.html">
+      <file leaf-file-name="LabInfo.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/abstract/LabInfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="61" />
+            <state relative-caret-position="297">
+              <caret line="204" column="43" selection-start-line="204" selection-start-column="43" selection-end-line="204" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LabInfo.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/view/abstract/LabInfo.html">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="204" column="43" selection-start-line="204" selection-start-column="43" selection-end-line="204" selection-end-column="43" />
+            <state relative-caret-position="0">
+              <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -196,6 +196,7 @@
         <option value="$PROJECT_DIR$/view/abstract/navbar_footer_base.html" />
         <option value="$PROJECT_DIR$/controller/test.js" />
         <option value="$PROJECT_DIR$/view/abstract/LabInfo.html" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -468,12 +469,12 @@
       <workItem from="1477622342652" duration="22096000" />
       <workItem from="1477667555623" duration="700000" />
       <workItem from="1477705816817" duration="30765000" />
-      <workItem from="1477789575557" duration="4680000" />
+      <workItem from="1477789575557" duration="5441000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215841000" />
+    <option name="totallyTimeSpent" value="216602000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -524,13 +525,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/6.5.0/core-modules/domain.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/koa-bodyparser/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -900,6 +894,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="204" column="43" selection-start-line="204" selection-start-column="43" selection-end-line="204" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
           <folding />
         </state>
       </provider>
