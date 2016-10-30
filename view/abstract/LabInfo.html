@@ -1,0 +1,211 @@
+{% extends 'abstract/navbar_footer_base.html' %}
+
+{% block navbar_name %}
+<a class="navbar-brand hidden-xs" style="color:#ffffff;"> {{navbar_name}}</a>
+{% endblock %}
+
+
+{% block body %}
+<div class="container">
+
+    <div class="jumbotron " style="background:#00BCD4">
+        <!-- 轮播（Carousel）项目 -->
+        <div class="container">
+            <div id="myCarousel" class="carousel slide ">
+
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <h1>同学你好</h1>
+                        <p>这里是大连民族大学<span>xxxx工作室</span></p>
+                        <p>
+                            <a class="btn btn-danger btn-lg" href="#" role="button">学生登陆
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                    </div>
+                    <div class="item">
+                        <h1>老师你好</h1>
+                        <p>登陆以获得更高权限</p>
+                        <p>
+                            <a class="btn btn-danger btn-lg" href="#" role="button">教师登陆
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                    </div>
+                </div>
+
+                <ol class="carousel-indicators" style="bottom: -25px">
+                    <li  data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+
+                </ol>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- </div>
+</div>-->
+
+<!--设备信息明细表-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-md-10 col-sm-10 col-lg-10 col-md-offset-1 col-sm-offset-1">
+            <div class="table-responsive">
+                <table class="table table-hover" style="background:beige">
+                    <tr>
+                        <th>实验室设备名称</th>
+                        <th>设备编号</th>
+                        <th>设备使用情况</th>
+                        <th>设备详情</th>
+                    </tr>
+                    <tr>
+                        <td>FPGA实验板</td>
+                        <td>01</td>
+                        <td>未使用</td>
+                        <td><a href="#0">了解详情</a></td>
+                    </tr>
+                    <tr>
+                        <td>ARM板</td>
+                        <td>01</td>
+                        <td>使用中</td>
+                        <td><a href="#0">了解详情</a></td>
+                    </tr>
+                    <tr>
+                        <td>ARM板</td>
+                        <td>01</td>
+                        <td>使用中</td>
+                        <td><a href="#0">了解详情</a></td>
+                    </tr>
+                    <tr>
+                        <td>ARM板</td>
+                        <td>01</td>
+                        <td>使用中</td>
+                        <td><a href="#0">了解详情</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--设备文字简介-->
+<div class="container-fluid">
+    <div class="row ">
+        <div id="info_1" class="col-xs-12 col-md-3 col-sm-12 col-lg-3 col-md-offset-1 col-lg-offset-1 ">
+            <div class="thumbnail">
+                <img data-src="holder.js/300x300" alt="..." src="images/Cyclone%20IV%20GX.jpg">
+                <div class="caption">
+                    <h3>FPGA开发板</h3>
+                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis
+                        parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+
+                        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+                        ullamcorper
+                    </p>
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <button type="button" class="btn btn-primary btn-default " role="button">视频教学</button>
+                            <button type="button" class="btn btn-danger btn-default" role="button">设备简介</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div  id="info_2"class="col-xs-12 col-md-3 col-sm-12 col-lg-3  ">
+            <div class="thumbnail">
+                <img data-src="holder.js/300x300" alt="..." src="images/Cyclone%20IV%20GX.jpg">
+                <div class="caption">
+                    <h3>FPGA开发板</h3>
+                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis
+                        parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+
+                        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+                        ullamcorper
+                    </p>
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <button type="button" class="btn btn-primary btn-default  " role="button">视频教学</button>
+                            <button type="button" class="btn btn-danger btn-default" role="button">设备简介</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div  id="info_3" class="col-xs-12 col-md-3 col-sm-12 col-lg-3 ">
+            <div class="thumbnail">
+                <img data-src="holder.js/300x300" alt="..." src="images/Cyclone%20IV%20GX.jpg">
+                <div class="caption">
+                    <h3>FPGA开发板</h3>
+                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis
+                        parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+
+                        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+                        ullamcorper
+                    </p>
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <button type="button" class="btn btn-primary btn-default  " role="button">视频教学</button>
+                            <button type="button" class="btn btn-danger btn-default" role="button">设备简介</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div id="pagination_container" >
+            <nav>
+                <ul id="pagination" class="pagination">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+    var get_Info_data = function () {
+        $.ajax("/test", {
+            method: "POST",
+            dataType: "json",
+            success:function (data, status) {
+                var table=JSON.parse(JSON.stringify(data)).types[0];
+                var introduction=JSON.parse(JSON.stringify(data)).types[1];
+            },
+            error:function (qXHR, textStatus, errorThrown) {
+                //请求失败
+                console.log(textStatus)
+            }
+        })
+    };
+
+   var  set_table=function (data,item_name) {
+       var context=data[item_name].context;
+   }
+$(function () {
+    get_Info_data();
+})
+</script>
+{% endblock %}

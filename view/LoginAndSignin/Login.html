@@ -1,0 +1,116 @@
+{% extends 'LoginAndSignin/LAndS_base.html' %}
+
+{%block body%}
+
+<div id="Whole_form">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <h2><strong>大连民族大学实验室管理系统</strong></h2>
+                <div class="description">
+                    <p>
+                        登陆后您将获得更高权限，管理我们的平台
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--登陆表单-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <div class="jumbotron" style="background: #00BCD4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 form-box">
+                                    <div class=" row">
+                                        <div class="col-xs-12  col-sm-12 col-md-12 col-lg-12 form-box">
+                                            <h2 id="the_login_row" style="margin-bottom:5px;"><strong>教师登陆</strong></h2>
+                                            <div id="login_tip_container">
+                                                <p id="login_tip" style="display:{{tip_switch}};font-size: small;">
+                                                    {{login_tip}}</p>
+                                            </div>
+
+                                            <div class="form-bottom " style="margin-top: 30px">
+                                                <form id="login_form" action="/teacher_manage_home_page" method="post">
+                                                    <div class="row">
+                                                        <div class="form-group col-lg-8 col-lg-offset-2">
+                                                            <label for="login_id">账号</label>
+                                                            <input type="text" name="login_id"
+                                                                   placeholder="请输入账号"
+                                                                   class=" form-control" id="login_id">
+                                                        </div>
+                                                        <div class="form-group col-lg-8 col-lg-offset-2">
+                                                            <label for="login_password">密码</label>
+                                                            <input type="password" name="login_password"
+                                                                   placeholder="密码"
+                                                                   class="form-password form-control"
+                                                                   id="login_password">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <button id="login" type="button"
+                                                                class="btn btn-default btn-warning">
+                                                            登陆
+                                                        </button>
+                                                        <a id="sign" type="button" href="http://localhost/Labor_signin"
+                                                                class="btn btn-default  btn-success hidden-xs">
+                                                            注册
+                                                        </a>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
+
+{% block script %}
+<script src="js/login.js"></script>
+<script>
+    /* $("#form_id").submit(function () {
+     var login_id=$("#login_id").val();
+     var login_password=$("#login_password").val();
+     $.ajax("/test", {
+     method:'POST',
+     data:{name:login_id,password:login_password}
+     }).done(function (data) {
+     return true;
+     }).fail(function (xhr, status) {
+     return true;
+     });
+     });*/
+    $("#login").click(
+            function () {
+                var id = $("#login_id").val();
+                var password = $("#login_password").val();
+                    $.ajax({
+                        type: "POST",
+                        url: "/login",
+                        data: $('#login_form').serialize(),
+                        dataType: 'json',
+                        success: function (msg) {
+                            var result = JSON.parse(JSON.stringify(msg));
+
+                            if (result.su === false) {
+                                $("#login_tip").text(result.msg).show(100).shake()
+                            } else {
+                                window.location.href = "http://localhost/teacher_manage_home_page";
+
+                            }
+                        }
+                    })
+            });
+
+</script>
+{% endblock %}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登出</title>
+    <script src="assets/js/jquery.min.js"></script>
+</head>
+<body>
+<p>注销成功，即将在<span id="num">3</span>秒后跳转。<br/>如果没有自动跳转请点击<a href="http://localhost/Labor_Info">点击我</a> </p>
+<script>
+
+    $(document).ready(function() {
+        function jump(count) {
+            window.setTimeout(function(){
+                count--;
+                if(count > 0) {
+                    $('#num').text(count);
+                    jump(count);
+                } else {
+                    location.href="http://localhost/Labor_Info";
+                }
+            }, 1000);
+        }
+        jump(3);
+    });
+
+</script>
+</body>
+</html>

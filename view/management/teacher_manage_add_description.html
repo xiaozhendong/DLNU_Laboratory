@@ -1,0 +1,184 @@
+{% extends 'management/manage_base.html' %}
+
+{% block body %}
+<div id="manage_content" class="col-xs-12 col-sm-9 col-md-9 col-lg-9 ">
+    <div class="my_fix_content" style="overflow-y: scroll;max-height: 100px;">
+        <ul class="breadcrumb" style="margin-top:10px;margin-bottom:0px">
+            <li><h2><strong style="color:#00BCD4">操作</strong></h2></li>
+            <li>添加说明</li>
+        </ul>
+
+        <div class="container-fluid" style="margin-top: 10px">
+            <div style="float: right;margin-bottom: 15px">
+                <a href="http://localhost/teacher_manage_upload_detail" type="button" class="btn btn-primary ">
+                    <span class="glyphicon glyphicon-cloud-upload"></span> 本地视频与图片上传
+                </a>
+            </div>
+        </div>
+
+        <div id="editor-container" class="container">
+            <div id="editor-trigger"></div>
+            <!-- <textarea id="editor-trigger" style="display:none;">
+                <p>请输入内容...</p>
+            </textarea> -->
+        </div>
+
+        <div class="container-fluid" style="margin-top: 10px">
+            <div style="float: right">
+                <button type="button" class="btn btn-primary ">
+                    <span class="glyphicon glyphicon-cloud-upload"></span> 上传
+                </button>
+                <button type="button" class="btn btn-primary ">
+                    <span class="glyphicon glyphicon-th"></span> 预览
+                </button>
+            </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="margin-top: 15px">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    最近上传图片
+                    <div class="my_panel_title"><a href="http://localhost/teacher_manage_upload_detail">上传与更多>></a>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table ">
+                        <tr>
+                            <th>图片名称</th>
+
+                            <th>URL</th>
+                        </tr>
+                        <tr>
+                            <td>FPGA说明</td>
+                            <td>2016/06/13</td>
+                        <tr>
+                            <td>FPGA说明</td>
+                            <td>2016/06/13</td>
+                        </tr>
+
+                        <tr>
+                            <td>FPGA说明</td>
+                            <td>2016/06/13</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="margin-top: 15px">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    最近上传视频
+                    <div class="my_panel_title"><a href="http://localhost/teacher_manage_upload_detail">上传与更多>></a>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table ">
+                        <tr>
+                            <th>视频名称</th>
+                            <th>URL</th>
+                        </tr>
+                        <tr>
+                            <td>FPGA说明</td>
+                            <td>2016/06/13</td>
+                        <tr>
+                            <td>FPGA说明</td>
+                            <td>2016/06/13</td>
+                        </tr>
+
+                        <tr>
+                            <td>FPGA说明</td>
+                            <td>2016/06/13</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+
+    var editor = new wangEditor('editor-trigger');
+    // 上传图片
+    editor.config.menus = [
+        'bold',
+        'underline',
+        'italic',
+        'strikethrough',
+        'eraser',
+        'forecolor',
+        'bgcolor',
+        'quote',
+        'fontfamily',
+        'fontsize',
+        'head',
+        'unorderlist',
+        'orderlist',
+        'alignleft',
+        'aligncenter',
+        'alignright',
+        'link',
+        'unlink',
+        'table',
+        'img',
+        'video',
+        'undo',
+        'redo',
+        'fullscreen'
+    ];
+    editor.config.uploadImgUrl = '/upload';
+    editor.config.uploadParams = {
+        // token1: 'abcde',
+        // token2: '12345'
+    };
+    editor.config.uploadHeaders = {
+        // 'Accept' : 'text/x-json'
+    };
+    editor.create();
+</script>
+<script>
+    $(function () {
+        $(".xzd a").css("color", "#5c5c5c");
+        set_fix_heigh();
+
+        $('.my_fix_content').niceScroll({
+            cursorcolor: "#ccc",//#CC0071 光标颜色
+            cursoropacitymax: 1, //改变不透明度非常光标处于活动状态（scrollabar“可见”状态），范围从1到0
+            touchbehavior: false, //使光标拖动滚动像在台式电脑触摸设备
+            cursorwidth: "1px", //像素光标的宽度
+            cursorborder: "0", // 游标边框css定义
+            cursorborderradius: "5px",//以像素为光标边界半径
+            autohidemode: true//是否隐藏滚动条
+        });
+
+    });
+    var set_fix_heigh = function () {
+
+        var screen_height = $(window).height();
+        var bar_height = $("#serive-bar").height();
+        var content_heigh = screen_height - bar_height;
+        $(".my_fix_content").css("max-height", content_heigh);
+        var table_max_width = $(".panel.panel-success").width();
+        $(".table").css("max-width", table_max_width);
+        if ($(window).width() > 768) {
+            $("#manage_content").css("padding", "0px 0px");
+        } else {
+            $("#manage_content").css("padding", "15px 15px");
+        }
+    };
+    $(window).resize(function () {
+        set_fix_heigh()
+
+    });
+
+</script>
+{% endblock %}

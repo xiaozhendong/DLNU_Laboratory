@@ -1,0 +1,8 @@
+/* Write your styles */
+@media only screen and (min-width: 641px) {
+    .admin-sidebar {
+        display: block;
+        position: static;
+        background: none;
+    }
+}

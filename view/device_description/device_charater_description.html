@@ -1,0 +1,46 @@
+{% extends 'device_description/device_description_base.html' %}
+
+{% block body %}
+
+{% endblock %}
+
+{% block script %}
+<script>
+    var bar = $("#my_bar").height() * 1.2;
+
+    $(function () {
+
+        $("#offcanvas a").css("color", "#000000");
+        /* $.scrollTo("#section-1");
+
+         $("#content").css("margin-top",bar)*/
+        if ($(window).width() < 768) {
+            $(".num").show();
+            $(".cha").hide();
+        } else {
+            $(".num").hide();
+            $(".cha").show();
+        }
+
+    });
+
+    $(window).resize(function () {
+        if ($(window).width() < 768) {
+            $(".num").show();
+            $(".cha").hide();
+        } else {
+            $(".num").hide();
+            $(".cha").show();
+        }
+
+    });
+
+    $("#jumpto a").click(function () {
+        $.scrollTo($(this).attr("href"), 500)
+    })
+    $("#offcanvas a").click(function () {
+        $("#doc-oc-demo2").offCanvas("close");
+
+    });
+</script>
+{% endblock %}

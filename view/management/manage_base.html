@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教师管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- <link href="assets/css/admin.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+    <script src="assets/js/amazeui.min.js"></script>
+    <script src="js/jquery.scrollTo.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <link href="css/Manage.css" rel="stylesheet"/>-->
+    <link href="assets/css/admin.css">
+    <link rel="stylesheet" type="text/css" href="Edtior/css/wangEditor.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+    <script src="assets/js/amazeui.min.js"></script>
+    <script src="js/jquery.scrollTo.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <link href="css/Manage.css" rel="stylesheet"/>
+    <style type="text/css">
+        #editor-trigger {
+            height: 400px;
+            /*max-height: 500px;*/
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .wangEditor-container .wangEditor-txt blockquote {
+
+        }
+
+        .wangEditor-container .wangEditor-txt table {
+            border: none;
+            border-collapse: collapse;
+
+        }
+
+        .wangEditor-container .wangEditor-txt table td,
+        .wangEditor-container .wangEditor-txt table th {
+            border: 1px solid #f1f1f1;
+            padding: 3px 5px;
+            min-width: 50px;
+            height: 20px;
+        }
+
+        .wangEditor-container .wangEditor-txt pre {
+            border: 1px solid #ccc;
+            background-color: #f8f8f8;
+            padding: 10px;
+            margin: 5px 0px;
+            font-size: 0.8em;
+            border-radius: 3px;
+        }
+    </style>
+    <script type="text/javascript" src="Edtior/js/wangEditor.js"></script>
+</head>
+<body style="height: 100%">
+<!--导航条-->
+<nav class=" navbar-default navbar-static-top " style="background:#0088cc none repeat scroll 0% 0%;"
+     role="navigation" id="serive-bar">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="my_bar" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                <div class="navbar-header">
+                    <a class="navbar-brand" style="color:#ffffff;">教师管理</a>
+                    <button type="button" class="navbar-toggle collapsed " data-toggle="collapse"
+                            style=" position: relative;float:right;padding: 9px 10px;margin-top: 8px;margin-right: 15px;margin-bottom: 8px;background-color: transparent; background-image: none;border: 1px solid transparent;border-radius: 4px;"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="glyphicon glyphicon-align-justify"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                               style="margin-right: 15px;color:#000000;">管理员<span class="caret"></span></a>
+                            <ul class="dropdown-menu" style="margin-top: 2px;background: #0088cc" role="menu">
+                                <li><a href="#" style="color:#000000;"><span class="glyphicon glyphicon-user"></span> 资料</a>
+                                </li>
+
+                                <li><a href="http://localhost/loginout" style="color:#000000;"><span class="glyphicon glyphicon-off"></span> 退出</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--侧边栏-->
+<div id="doc-oc-demo2" class="am-offcanvas admin-sidebar ">
+    <div class="am-offcanvas-bar " style="background:#FFFFFF;">
+        <div class="am-offcanvas-content">
+            <div class=" admin-sidebar ">
+                <ul class="am-list admin-sidebar-list xzd">
+                    <li><a href="http://localhost/teacher_manage_home_page"><span class="glyphicon glyphicon-home"></span> 主页</a></li>
+                    <li><a href="http://localhost/teacher_manage_add_description"><span class="glyphicon glyphicon-print"></span> 实验室设备（文字/视频）</a></li>
+                    <li><a href="#section-2"><span class="glyphicon glyphicon-inbox"></span> 实验室项目</a></li>
+                    <li><a href="#section-2"><span class="glyphicon glyphicon-tasks"></span> 实验室排课</a></li>
+                    <li><a href="">最近消息 <span class="badge">0</span></a></li>
+                    <li><a href="#section-3"><span class="glyphicon glyphicon-info-sign"></span> 关于我们</a></li>
+                    <li><a href=""><span class="glyphicon glyphicon-comment"></span> 改进建议</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--只有当是小屏幕时候该按钮将唤起侧边栏-->
+<a href="#" style="position: fixed;z-index:10;bottom:10%;right:10%;"
+   class="am-icon-btn am-icon-th-list visible-xs admin-menu"
+   data-am-offcanvas="{target: '#doc-oc-demo2', effect: 'push'}"></a>
+<!--电脑端的导航页-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-3 hidden-xs ">
+            <div class="my_fix_content" style="overflow-y: scroll;max-height: 100px; ">
+                <ul class="am-list admin-sidebar-list xzd">
+                    <li><a href="http://localhost/teacher_manage_home_page"><span class="glyphicon glyphicon-home"></span> 主页</a></li>
+                    <li><a href="http://localhost/teacher_manage_add_description"><span class="glyphicon glyphicon-print"></span> 实验室设备（文字/视频）</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-tasks"></span> 实验室项目</a></li>
+                    <li><a href="#section-2"><span class="glyphicon glyphicon-calendar"></span> 实验室排课</a></li>
+                    <li><a href="">最近消息 <span class="badge">0</span></a></li>
+                    <li><a href="#section-3"><span class="glyphicon glyphicon-info-sign"></span> 关于我们</a></li>
+                    <li><a href=""><span class="glyphicon glyphicon-comment"></span> 改进建议</a></li>
+                </ul>
+            </div>
+        </div>
+
+        {% block body %}{% endblock %}
+
+    </div>
+</div>
+
+
+
+{% block script %}{% endblock %}
+</body>
+</html>

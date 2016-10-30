@@ -1,0 +1,56 @@
+@media (min-width: 768px) {
+    .my_border {
+        border-right: 1px solid #dddddd;
+    }
+}
+
+@media (max-width: 767px) {
+    .my_border {
+        border-bottom: 1px solid #dddddd;
+    }
+}
+
+@media (min-width: 768px) {
+    .my_li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 33.33%;
+        float: left;
+    }
+}
+
+@media (max-width: 767px) {
+    .my_li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+    }
+}
+
+.offen_visit_model {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    list-style: none;
+}
+@media (min-width: 768px) {
+    .my_col-xs-11 {
+        width: 96%;
+        margin-left: 2%;
+
+    }
+}
+
+.my_panel_title{
+    float: right;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+}
+.my-table-responsive {
+
+
+    overflow-x:scroll;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}

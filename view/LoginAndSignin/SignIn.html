@@ -1,0 +1,198 @@
+{% extends 'LoginAndSignin/LAndS_base.html' %}
+
+{%block body%}
+<div id="Whole_form">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <h2><strong>注册</strong></h2>
+            </div>
+        </div>
+
+        <!--登陆表单-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <div class="jumbotron" style="background: #00BCD4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 form-box">
+                                    <div class=" row">
+                                        <div class="col-xs-12  col-sm-12 col-md-12 col-lg-12 form-box">
+                                            <div id="signin_tip_container">
+                                                <p id="signin_tip"
+                                                   style="display:{{signin_tip_switch}};font-size: small;">
+                                                    {{login_tip}}</p>
+                                            </div>
+                                            <h2 id="signin_step" style="margin-bottom:10px;"><strong>step：</strong><span
+                                                    id="step">1</span>/3</h2>
+                                            <div class="form-bottom">
+                                                <form id="register_form">
+                                                    <!--action="/sign" method="post" class="login-form"-->
+                                                    <div class="row">
+                                                        <div class="container">
+                                                            <div id="myCarousel" class="carousel slide ">
+                                                                <div class="carousel-inner">
+                                                                    <div class="item active">
+                                                                        <div class="form-group col-lg-8 col-lg-offset-2">
+                                                                            <label for="form-type">选择用户类型</label>
+                                                                            <select id="form-type"
+                                                                                    class="form-control"
+                                                                                    name="form_type">
+                                                                                <option>教师</option>
+                                                                                <option>学生</option>
+                                                                            </select>
+
+                                                                        </div>
+                                                                        <div class="form-group col-lg-8 col-lg-offset-2">
+                                                                            <label for="std_or_teacher_id">学号或学工号</label>
+                                                                            <input id="std_or_teacher_id" type="text"
+                                                                                   name="form_id"
+                                                                                   placeholder="学号或学工号"
+                                                                                   class="form-password form-control">
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="item">
+                                                                        <div class="form-group col-lg-8 col-lg-offset-2">
+                                                                            <label for="form_password">密码</label>
+                                                                            <input type="password" name="form_password"
+                                                                                   placeholder="请输入密码"
+                                                                                   class=" form-control"
+                                                                                   id="form_password">
+                                                                        </div>
+                                                                        <div class="form-group col-lg-8 col-lg-offset-2">
+                                                                            <label for="form_password_agin">再次确认密码</label>
+                                                                            <input type="password" name="form_password"
+                                                                                   placeholder="请您再次确认密码"
+                                                                                   class="form-password form-control"
+                                                                                   id="form_password_agin">
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="item">
+                                                                        <div class="form-group col-lg-8 col-lg-offset-2">
+                                                                            <label for="form_telephone">电话</label>
+                                                                            <input type="text" name="form_telephone"
+                                                                                   placeholder="请输入您的电话"
+                                                                                   class=" form-control"
+                                                                                   id="form_telephone">
+                                                                        </div>
+                                                                        <div class="form-group col-lg-8 col-lg-offset-2">
+                                                                            <label for="form_email">邮箱</label>
+                                                                            <input type="text" name="form_email"
+                                                                                   placeholder="请输入您的邮箱"
+                                                                                   class="form-password form-control"
+                                                                                   id="form_email">
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--  <div class="item">
+                                                                          <div class="form-group col-lg-8 col-lg-offset-2">
+                                                                              <label for="select-college">学院</label>
+                                                                              <select id="select-college"
+                                                                                      class="form-control"
+                                                                                      name="form_college">
+                                                                                  <option>信息与通信工程学院</option>
+                                                                                  <option>机电信息工程学院</option>
+                                                                              </select>
+                                                                          </div>
+                                                                          <div class="form-group col-lg-8 col-lg-offset-2">
+                                                                              <label for="select-department">专业</label>
+                                                                              <select id="select-department"
+                                                                                      class="form-control"
+                                                                                      name="form_college">
+                                                                                  <option>电子信息工程</option>
+                                                                                  <option>通信工程</option>
+                                                                                  <option>物联网工程</option>
+                                                                              </select>
+
+                                                                          </div>
+                                                                      </div>-->
+                                                                </div>
+                                                            </div>
+                                                            <button id="pre" class="btn btn-default btn-warning"
+                                                                    data-target="#myCarousel"
+                                                                    data-slide-to="2">上一步
+                                                            </button>
+                                                            <button id="next" class="btn btn-default btn-warning"
+                                                                    type="button"
+                                                                    data-target="#myCarousel"
+                                                                    data-slide-to="3">下一步
+                                                            </button>
+                                                            <button id="sign" type="button"
+                                                                    class="btn btn-default btn-warning">注册
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid visible-xs">
+    <div id="bottom_bar" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+        <div class="container-fluid">
+            <div class="row">
+                <div id="ract_bar" class="col-xs-12 ">
+                </div>
+                <div id="bar_text_buttom" class="col-xs-6 text-center">
+                    <a style="text-decoration : none " href="std_Login.html">
+                        <img src="images/std——login.gif">
+                        <footer>学生登陆</footer>
+                    </a>
+                </div>
+                <div class="col-xs-6 text-center">
+                    <a href="teacher_login.html" style="text-decoration : none ">
+                        <img src="images/teacher_login.gif">
+                        <footer>教师登陆</footer>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}
+
+
+{% block script %}
+<script>
+    //异步提交代码
+    $("#sign").click(function () {
+        var type = $("#std_or_teacher_id").val();
+        var id = $("#form_id").val();
+        var password = $("#form_password").val();
+        var phone_number = $("#form_telephone").val();
+        var e_mail = $("#form_email").val();
+
+
+        if (id === "undefined" || password === "" || phone_number === "" || e_mail === "") {
+            $("#signin_tip").text("您有注册项目未填写").show(100);
+        } else {
+            $.ajax({
+                type: "POST",
+                url: "/register",
+                data: $('#register_form').serialize(),
+                dataType: 'json',
+                success: function (msg) {
+                 var result= JSON.parse(JSON.stringify(msg));
+                   if( result.su===false) {
+                       $("#signin_tip").text(result.msg).show(100).shake()
+                   }else {
+                       window.location.href="http://localhost/Labor_teacher_login";
+                   }
+                }
+            })
+        }
+    });
+</script>
+<script src="js/signin.js"></script>
+
+{% endblock %}

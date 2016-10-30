@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>{{title}}</title>
+    <META charset="utf-8">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap-theme.css">
+    <link href="css/bootstrap.min.css.map">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-static-top " style="background:#03A9F4 none repeat scroll 0% 0%;"
+     role="navigation" id="serive-bar">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                <div class="navbar-header ">
+                    <button type="button" class="left navbar-toggle2 collapsed visible-xs" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="glyphicon glyphicon-home"></span>
+                    </button>
+                    <a href="http://localhost/Labor_Info" class="navbar-brand hidden-xs hidden-sm" style="color:#ffffff;">返回主页</a>
+                </div>
+
+                <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="http://localhost/Labor_Info" class="hidden-md hidden-lg" style="color:#ffffff;">返回主页</a></li>
+                        <li><a href="../abstract/LabInfo.html" class="hidden-xs" style="color:#ffffff;">{{another_login}}</a></li>
+                        <li><a href="{{switch_login_href}}" class="hidden-xs" style="color: #ffffff;">{{switch_login}}</a></li>
+                        <li><a href="#" style="color:#ffffff;">改进建议</a></li>
+                        <li><a href="#" style="color:#ffffff;">关于我们</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+{% block body %}{% endblock %}
+
+
+
+
+
+
+
+
+
+<div class="container-fluid visible-xs">
+    <div id="bottom_bar" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 ">
+                    <div id="ract_bar">
+
+                    </div>
+                </div>
+                <div id="bar_text_buttom" class="col-xs-4 text-center">
+                    <div>
+                        <a href="../abstract/LabInfo.html" style="text-decoration : none " href="/">
+                            <img src="images/abstract.gif">
+                            <footer>概览</footer>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <a href="teacher_login.html" style="text-decoration : none ">
+                        <img src="images/teacher_login.gif">
+                        <footer>{{switch_login}}</footer>
+                    </a>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <a style="text-decoration : none " href="Sign.html">
+                        <img src="images/sign.gif">
+                        <footer>注册</footer>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block script %}{% endblock %}
+</body>
+</html>

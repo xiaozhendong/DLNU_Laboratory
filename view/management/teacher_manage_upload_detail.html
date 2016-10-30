@@ -1,0 +1,375 @@
+{% extends 'management/manage_base.html' %}
+
+
+{% block body %}
+<div id="manage_content" class="col-xs-12 col-sm-9 col-md-9 col-lg-9 ">
+    <div class="my_fix_content" style="overflow-y: scroll;max-height: 100px;">
+        <div class="my_fix_content" style="overflow-y: scroll;max-height: 100px;">
+            <ul class="breadcrumb" style="margin-top:10px;margin-bottom:0px">
+                <li><h2><strong style="color:#00BCD4">添加说明</strong></h2></li>
+                <li>上传记录</li>
+            </ul>
+
+            <div class="container-fluid">
+                <div style="float: right">
+                    <button type="button" class="btn btn-primary " id="picture_upload" data-toggle="modal"
+                            data-target="#myModal">
+                        <span class="glyphicon glyphicon-cloud-upload"></span> 图片上传
+                    </button>
+                    <button type="button" class="btn btn-primary " id="video_upload">
+                        <span class="glyphicon glyphicon-cloud-upload"></span> 视频上传
+                    </button>
+                </div>
+            </div>
+
+            <!--图片上传模态框-->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span
+                                    aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="myModalLabel">图片上传</h4>
+                        </div>
+
+                        <!--模态框-->
+                        <div class="modal-body">
+                            <label for="pic-preview">图片预览</label>
+                            <div id="pic-preview"
+                                 style="width:100%;height: 200px;border: 1px solid silver;background-size:100% 200px;"></div>
+                            <form id="pic_form">
+                                <div class="input-group" style="width: 100%">
+                                    <label for="pic_des">文字描述</label>
+                                    <input id="pic_des" type="text"
+                                           placeholder="请少于8个字"
+                                           class="form-password form-control">
+                                    <input type="file" id="file" name="file" style="height:0px;width:0px;">
+                                    <div>
+                                        <p id="upload_descripton" style="margin-top: 15px;float: left;">文字说明</p>
+                                        <div style="margin-top: 15px;float: right">
+
+                                            <button id="choose_file" type="button" class="btn btn-default">
+                                                选择文件
+                                            </button>
+                                            <a data-dismiss="modal" id="close_model" style="width: 0px;height: 0px"></a>
+                                            <input type="submit" class="btn btn-primary"
+                                                   value="上传">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                        <!--模态框-->
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="margin-top: 15px;">
+                <div class="input-group" style="margin-bottom: 10px">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            搜索类型<span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">按时间</a></li>
+                            <li><a href="#">按名称</a></li>
+                        </ul>
+
+                    </div><!-- /btn-group -->
+                    <input type="text" class="form-control">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default ">搜索</button>
+                    </div>
+                </div><!-- /input-group -->
+
+                <div class="panel panel-success ">
+                    <div class="panel-heading">
+                        上传图片
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table ">
+                            <tr>
+                                <th>图片名称</th>
+                                <th>上传时间</th>
+                                <th>文件描述</th>
+                                <th>URL</th>
+                            </tr>
+                            <tr>
+                                <td>FPGA说明</td>
+                                <td>2016/06/13</td>
+                                <td>这是一张图片</td>
+                                <th>URL</th>
+                            </tr>
+                            <tr>
+                                <td>FPGA说明</td>
+                                <td>2016/06/13</td>
+                                <td>这是一张图片</td>
+                                <th>URL</th>
+                            </tr>
+                            <tr>
+                                <td>FPGA说明</td>
+                                <td>2016/06/13</td>
+                                <td>这是一张图片</td>
+                                <th>URL</th>
+                            </tr>
+                            <tr>
+                                <td>FPGA说明</td>
+                                <td>2016/06/13</td>
+                                <td>这是一张图片</td>
+                                <th>URL</th>
+                            </tr>
+                            <tr>
+                                <td>FPGA说明</td>
+                                <td>2016/06/13</td>
+                                <td>这是一张图片</td>
+                                <th>URL</th>
+                            </tr>
+                            <tr>
+                                <td>FPGA说明</td>
+                                <td>2016/06/13</td>
+                                <td>这是一张图片</td>
+                                <th>URL</th>
+                            </tr>
+                            <tr>
+                                <td>FPGA说明</td>
+                                <td>2016/06/13</td>
+                                <td>这是一张图片</td>
+                                <th>URL</th>
+                            </tr>
+                            <tr>
+                                <td>FPGA说明</td>
+                                <td>2016/06/13</td>
+                                <td>这是一张图片</td>
+                                <th>URL</th>
+                            </tr>
+                            <tr>
+                                <td>FPGA说明</td>
+                                <td>2016/06/13</td>
+                                <td>这是一张图片</td>
+                                <th>URL</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="container-fluid text-center">
+                        <ul class="pagination ">
+                            <li><a href="#">上一页</a></li>
+                            <li><a href="#">下一页</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="margin-top: 15px">
+                <div class="input-group" style="margin-bottom: 10px">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            搜索类型<span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">按时间</a></li>
+                            <li><a href="#">按名称</a></li>
+                        </ul>
+
+                    </div><!-- /btn-group -->
+                    <input type="text" class="form-control">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default ">搜索</button>
+                    </div>
+                </div><!-- /input-group -->
+
+                <div class="panel panel-success ">
+                    <div class="panel-heading">
+                        上传视频
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table ">
+                            <tr>
+                                <th>图片名称</th>
+                                <th>上传时间</th>
+                                <th>文件描述</th>
+                                <th>URL</th>
+                            </tr>
+                            <tr>
+                                <td>FPGA说明</td>
+                                <td>2016/06/13</td>
+                                <td>这是一张图片</td>
+                                <th>URL</th>
+                            </tr>
+                            <tr>
+                                <td>FPGA说明</td>
+                                <td>2016/06/13</td>
+                                <td>这是一张图片</td>
+                                <th>URL</th>
+                            </tr>
+                            <tr>
+                                <td>FPGA说明</td>
+                                <td>2016/06/13</td>
+                                <td>这是一张图片</td>
+                                <th>URL</th>
+                            </tr>
+                            <tr>
+                                <td>FPGA说明</td>
+                                <td>2016/06/13</td>
+                                <td>这是一张图片</td>
+                                <th>URL</th>
+                            </tr>
+                            <tr>
+                                <td>FPGA说明</td>
+                                <td>2016/06/13</td>
+                                <td>这是一张图片</td>
+                                <th>URL</th>
+                            </tr>
+                            <tr>
+                                <td>FPGA说明</td>
+                                <td>2016/06/13</td>
+                                <td>这是一张图片</td>
+                                <th>URL</th>
+                            </tr>
+                            <tr>
+                                <td>FPGA说明</td>
+                                <td>2016/06/13</td>
+                                <td>这是一张图片</td>
+                                <th>URL</th>
+                            </tr>
+                            <tr>
+                                <td>FPGA说明</td>
+                                <td>2016/06/13</td>
+                                <td>这是一张图片</td>
+                                <th>URL</th>
+                            </tr>
+                            <tr>
+                                <td>FPGA说明</td>
+                                <td>2016/06/13</td>
+                                <td>这是一张图片</td>
+                                <th>URL</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="container-fluid text-center">
+                        <ul class="pagination ">
+                            <li><a href="#">上一页</a></li>
+                            <li><a href="#">下一页</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block script %}
+<script>
+    $(function () {
+        $(".xzd a").css("color", "#5c5c5c");
+        set_fix_heigh();
+        set_upload();
+        add_picture_file_chooser();
+        pic_submit();
+        $('.my_fix_content').niceScroll({
+            cursorcolor: "#ccc",//#CC0071 光标颜色
+            cursoropacitymax: 1, //改变不透明度非常光标处于活动状态（scrollabar“可见”状态），范围从1到0
+            touchbehavior: false, //使光标拖动滚动像在台式电脑触摸设备
+            cursorwidth: "1px", //像素光标的宽度
+            cursorborder: "0", // 游标边框css定义
+            cursorborderradius: "5px",//以像素为光标边界半径
+            autohidemode: true//是否隐藏滚动条
+        });
+
+    });
+
+    var add_picture_file_chooser = function () {
+
+        $("#choose_file").click(function () {
+            $("#file").click();
+
+        });
+
+        $("#file").change(function () {
+            var fileInput = document.getElementById('file');
+            var pic_preview = document.getElementById('pic-preview');
+            var file = fileInput.files[0];
+            pic_preview.style.backgroundImage = '';
+
+            if (file.type === "image/jpeg" || file.type === "image/jpg" || file.type === "image/png") {
+                $("#upload_descripton").css("color", "black");
+                var file_size = file.size;
+                if (file.size < 1048676) {
+                    file_size = file_size / 1024;
+                    $("#upload_descripton").text("文件名称:" + file.name + "  " + "文件大小:" + file_size.toFixed(2) + "kB");
+                } else {
+                    file_size = file_size / 1048576;
+                    $("#upload_descripton").text("文件名称：" + file.name + "  " + "文件大小:" + file_size.toFixed(2) + "MB");
+                }
+                //读取文件
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    var
+                            data = e.target.result; // 'data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...'
+                    pic_preview.style.backgroundImage = 'url(' + data + ')';
+                };
+
+                reader.readAsDataURL(file);
+            } else {
+                $("#upload_descripton").css("color", "red");
+                $("#upload_descripton").html("<span class='glyphicon glyphicon-remove-circle'></span>" + " 不是有效上传格式");
+            }
+
+        });
+
+        var d_file = $("#choose_file");
+        if (!d_file.value) {
+            $("#upload_descripton").text("没有选择任何文件")
+        }
+    };
+
+    var set_upload = function () {
+        if ($(window).width() < 992) {
+            $("#picture_upload").attr("disabled", "disabled");
+            $("#video_upload").attr("disabled", "disabled");
+        } else {
+            $("#picture_upload").removeAttr("disabled");
+            $("#video_upload").removeAttr("disabled");
+        }
+    };
+
+    var set_fix_heigh = function () {
+
+        var screen_height = $(window).height();
+        var bar_height = $("#serive-bar").height();
+        var content_heigh = screen_height - bar_height;
+        $(".my_fix_content").css("max-height", content_heigh);
+        var table_max_width = $(".panel.panel-success").width();
+        $(".table").css("max-width", table_max_width);
+        if ($(window).width() > 768) {
+            $("#manage_content").css("padding", "0px 0px");
+        } else {
+            $("#manage_content").css("padding", "15px 15px");
+        }
+    };
+    $(window).resize(function () {
+        set_fix_heigh();
+        set_upload();
+    });
+
+
+    function pic_submit() {
+// 使用 jQuery 异步提交表单
+        $('#pic_form').submit(function () {
+            var strTxtName = $("#pic_des").val();
+            $.post("/test",{
+            name:strTxtName
+            },function(data,status){
+                alert("Data: " + data + "\nStatus: " + status);
+            });
+            return true;
+        });
+
+    }
+
+</script>
+{% endblock %}
