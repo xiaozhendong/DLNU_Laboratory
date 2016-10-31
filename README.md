@@ -1,1 +1,3 @@
 大连民族大学实验室管理系统
+后端采用nodejs
+前段采用bootstrap以及amazeui
