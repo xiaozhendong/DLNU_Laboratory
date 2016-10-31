@@ -33,7 +33,7 @@
                 </div>
 
                 <ol class="carousel-indicators" style="bottom: -25px">
-                    <li  data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
 
                 </ol>
@@ -51,8 +51,8 @@
 <!--设备信息明细表-->
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xs-12 col-md-10 col-sm-10 col-lg-10 col-md-offset-1 col-sm-offset-1">
-            <div class="table-responsive">
+        <div id="info_table" class="col-xs-12 col-md-10 col-sm-10 col-lg-10 col-md-offset-1 col-sm-offset-1">
+            <!--<div class="table-responsive">
                 <table class="table table-hover" style="background:beige">
                     <tr>
                         <th>实验室设备名称</th>
@@ -85,7 +85,7 @@
                         <td><a href="#0">了解详情</a></td>
                     </tr>
                 </table>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>
@@ -93,8 +93,8 @@
 
 <!--设备文字简介-->
 <div class="container-fluid">
-    <div class="row ">
-        <div id="info_1" class="col-xs-12 col-md-3 col-sm-12 col-lg-3 col-md-offset-1 col-lg-offset-1 ">
+    <div id="info_introduction" class="row ">
+       <!-- <div id="info_1" class="col-xs-12 col-md-3 col-sm-12 col-lg-3 col-md-offset-1 col-lg-offset-1 ">
             <div class="thumbnail">
                 <img data-src="holder.js/300x300" alt="..." src="images/Cyclone%20IV%20GX.jpg">
                 <div class="caption">
@@ -116,7 +116,7 @@
                 </div>
             </div>
         </div>
-        <div  id="info_2"class="col-xs-12 col-md-3 col-sm-12 col-lg-3  ">
+        <div id="info_2" class="col-xs-12 col-md-3 col-sm-12 col-lg-3  ">
             <div class="thumbnail">
                 <img data-src="holder.js/300x300" alt="..." src="images/Cyclone%20IV%20GX.jpg">
                 <div class="caption">
@@ -138,7 +138,7 @@
                 </div>
             </div>
         </div>
-        <div  id="info_3" class="col-xs-12 col-md-3 col-sm-12 col-lg-3 ">
+        <div id="info_3" class="col-xs-12 col-md-3 col-sm-12 col-lg-3 ">
             <div class="thumbnail">
                 <img data-src="holder.js/300x300" alt="..." src="images/Cyclone%20IV%20GX.jpg">
                 <div class="caption">
@@ -160,14 +160,14 @@
                 </div>
             </div>
 
-        </div>
+        </div>-->
     </div>
 </div>
 
 
 <div class="container">
     <div class="row">
-        <div id="pagination_container" >
+        <div id="pagination_container">
             <nav>
                 <ul id="pagination" class="pagination">
                     <li><a href="#">&laquo;</a></li>
@@ -190,22 +190,59 @@
         $.ajax("/test", {
             method: "POST",
             dataType: "json",
-            success:function (data, status) {
-                var table=JSON.parse(JSON.stringify(data)).types[0];
-                var introduction=JSON.parse(JSON.stringify(data)).types[1];
+            success: function (data, status) {
+                var data_format = JSON.parse(JSON.stringify(data));
+                var table = data_format.types[0];
+                var introduction = data_format.types[1];
+                $("#info_table").html(set_table(data_format, table));//这里得到源码
+                $("#info_introduction").html(set_introduction(data_format,introduction))
             },
-            error:function (qXHR, textStatus, errorThrown) {
+            error: function (qXHR, textStatus, errorThrown) {
                 //请求失败
-                console.log(textStatus)
+                $("#info_table").html("<p>表格数据获取取失败点击<a href='http://localhost/Labor_Info'>此处重试</a> </p>")
             }
         })
     };
 
-   var  set_table=function (data,item_name) {
-       var context=data[item_name].context;
-   }
-$(function () {
-    get_Info_data();
-})
+    var set_introduction = function (data, item_name) {
+        var context = data[item_name].context;
+        var introduction_code = "";
+        var i = 3;
+        for (var item in context) {
+            if (i === 3) {
+                introduction_code = introduction_code + '<div id="info_" class="col-xs-12 col-md-3 col-sm-12 col-lg-3 col-md-offset-1 col-lg-offset-1 ">' +
+                        '<div class="thumbnail"> <img data-src="holder.js/300x300" alt="..." src="' + context[item].url + '">' +
+                        '  <div class="caption"><h3>'+context[item].sketch_heder+'</h3><p> '+context[item].sketch+'</p> <div class="container-fluid"> <div class="row"> <button type="button" class="btn btn-primary btn-default  " role="button">视频教学</button> <button type="button" class="btn btn-danger btn-default" role="button">设备简介</button> </div> </div></div>' + '</div>' + '</div>';
+
+                i--;
+            } else {
+                introduction_code = introduction_code + '<div id="info_" class="col-xs-12 col-md-3 col-sm-12 col-lg-3 ">' +
+                        '<div class="thumbnail"> <img data-src="holder.js/300x300" alt="..." src="' + context[item].url + '">' +
+                        '  <div class="caption"><h3>'+context[item].sketch_heder+'</h3><p> '+context[item].sketch+'</p> <div class="container-fluid"> <div class="row"> <button type="button" class="btn btn-primary btn-default  " role="button">视频教学</button> <button type="button" class="btn btn-danger btn-default" role="button">设备简介</button> </div> </div></div>' + '</div>' + '</div>';
+                i--;
+
+
+                if (i === 0) {
+                    i = 3;
+                }
+            }
+
+        }
+        return introduction_code;
+    };
+
+    var set_table = function (data, item_name) {
+        var context = data[item_name].context;
+        //默认第一行不是表头  表头我在这添加的
+        var table_code = '<div class="table-responsive"> <table class="table table-hover" style="background:beige"> <tr> <th>实验室设备名称</th> <th>设备编号</th> <th>设备使用情况</th> <th>设备详情</th> </tr>';
+        for (var item in context) {
+            table_code = table_code + "<tr>" + "<td>" + context[item].name + "</td>" + "<td>" + context[item].number + "</td>" + "<td>" + context[item].status + "</td>" + "<td>" + "<a href=" + context[item].url + ">了解详情</a>" + "</td>" + "</tr>";
+        }
+        table_code = table_code + " </table> </div>";
+        return table_code;
+    };
+    $(function () {
+        get_Info_data();
+    })
 </script>
 {% endblock %}
