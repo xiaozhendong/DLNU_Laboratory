@@ -1,0 +1,99 @@
+{% extends 'management/manage_base.html' %}
+
+{% block body %}
+<div id="manage_content" class="col-xs-12 col-sm-9 col-md-9 col-lg-9 ">
+    <div class="my_fix_content" style="overflow-y: scroll;max-height: 100px;">
+
+        <ul class="breadcrumb" style="margin-top:10px;margin-bottom:0px">
+            <li><h2><strong style="color:#00BCD4">添加设备信息</strong></h2></li>
+            <li>首页简介</li>
+        </ul>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-md-offset-1 col-sm-offset-1 col-sm-offset-1">
+                <form id="">
+                    <label for="Labor_info_pic" style="margin-top: 10px">首页简介图片</label>
+                    <input id="Labor_info_pic" type="text"
+                           name="form_id"
+                           placeholder="输入图片url"
+                           class="form-control">
+                    <label for="Labor_info_header" style="margin-top: 10px">首页简介标题</label>
+                    <input id="Labor_info_header" type="text"
+                           name="form_id"
+                           placeholder="输入首页简介的标题"
+                           class="form-control">
+                    <label for="Labor_info_context" style="margin-top: 10px">首页简介内容</label>
+                    <textarea id="Labor_info_context" rows="15"
+                              placeholder="输入首页设备简介（少于300字符）"
+                              style="width: 100%;border-radius:4px;border: 1px solid #ccc;"></textarea>
+                    <label for="Labor_info_video" style="margin-top: 10px">首页简介视频索引</label>
+                    <input id="Labor_info_video" type="text"
+                           name="form_id"
+                           placeholder="输入首页视频的url"
+                           class="form-control">
+                    <label for="Labor_info_detail" style="margin-top: 10px">首页简介设备详情索引</label>
+                    <input id="Labor_info_detail" type="text"
+                           name="form_id"
+                           placeholder="输入首页设备详情url"
+                           class="form-control">
+                    <div style="width: 100%;">
+                        <button type="button" class="btn btn-primary " id="Labor_Info_upload"
+                                style="float:right;margin-top: 15px;margin-bottom: 15px">
+                            <span class="glyphicon glyphicon-cloud-upload"></span> 上传并生成简介
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="js/jquery.charactercounter.js"></script>
+
+
+<script>
+    //ajax异步提交代码
+</script>
+<script>
+
+    $(function () {
+        $(".xzd a").css("color", "#5c5c5c");
+        set_fix_heigh();
+
+        $('.my_fix_content').niceScroll({
+            cursorcolor: "#ccc",//#CC0071 光标颜色
+            cursoropacitymax: 1, //改变不透明度非常光标处于活动状态（scrollabar“可见”状态），范围从1到0
+            touchbehavior: false, //使光标拖动滚动像在台式电脑触摸设备
+            cursorwidth: "1px", //像素光标的宽度
+            cursorborder: "0", // 游标边框css定义
+            cursorborderradius: "5px",//以像素为光标边界半径
+            autohidemode: true//是否隐藏滚动条
+        });
+        $('#Labor_info_context').characterCounter(300);
+
+    });
+
+
+    var set_fix_heigh = function () {
+
+        var screen_height = $(window).height();
+        var bar_height = $("#serive-bar").height();
+        var content_heigh = screen_height - bar_height;
+        $(".my_fix_content").css("max-height", content_heigh);
+        var table_max_width = $(".panel.panel-success").width();
+        $(".table").css("max-width", table_max_width);
+        if ($(window).width() > 768) {
+            $("#manage_content").css("padding", "0px 0px");
+        } else {
+            $("#manage_content").css("padding", "15px 15px");
+        }
+    };
+    $(window).resize(function () {
+        set_fix_heigh()
+
+    });
+
+</script>
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+{% endblock %}

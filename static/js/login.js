@@ -23,10 +23,10 @@ var check_login_id = function () {
     var login_id = $("#login_id").val();
     var password=$("#login_password").val();
     var password_re=/^\w{6,20}$/;
-    var id_re = /^\d{10}$/;
+    var id_re = /^\d{8}$/;
     if (!id_re.test(login_id)) {
         $("#login_tip").css("color","red");
-        $("#login_tip").text("请输入10位的学工号").show(100);
+        $("#login_tip").text("请输入8位的学工号").show(100);
         $("#login").attr("disabled", "disabled");
     }else {
         if (!password_re.test(password)){
@@ -44,10 +44,10 @@ var check_password=function () {
     var password=$("#login_password").val();
     var login_id = $("#login_id").val();
     var password_re=/^\w{6,20}$/;
-    var id_re = /^\d{10}$/;
+    var id_re = /^\d{8}$/;
     if (!password_re.test(password)){
         if (!id_re.test(login_id)){
-            $("#login_tip").text("请输入10位的学工号").show(100);
+            $("#login_tip").text("请输入8位的学工号").show(100);
             $("#login").attr("disabled", "disabled");
         }else {
 
@@ -56,7 +56,7 @@ var check_password=function () {
         }
     }else {
         if (!id_re.test(login_id)){
-            $("#login_tip").text("请输入10位的学工号").show(100).shake();
+            $("#login_tip").text("请输入8位的学工号").show(100).shake();
             $("#login").attr("disabled", "disabled");
         }else {
             $("#login").removeAttr("disabled");
@@ -83,11 +83,15 @@ $(function () {
     $("#login").attr("disabled", "disabled");
     $("#login_tip").css("color","red");
 
-    $("#login_id").keyup(function () {
+    var bind_name = 'input';
+    if (navigator.userAgent.indexOf("MSIE") != -1){
+        bind_name = 'propertychange';
+    }
+    $("#login_id").bind(bind_name, function(){
         check_login_id();
     });
-    $("#login_password").keyup(function () {
-        check_password()
+    $("#login_password").bind(bind_name, function(){
+        check_password();
     });
 
     $("#login_id").blur(function () {
