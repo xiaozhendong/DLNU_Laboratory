@@ -150,12 +150,7 @@
                         ullamcorper
                     </p>
 
-                    <div class="container-fluid">
-                        <div class="row">
-                            <button type="button" class="btn btn-primary btn-default  " role="button">视频教学</button>
-                            <button type="button" class="btn btn-danger btn-default" role="button">设备简介</button>
-                        </div>
-                    </div>
+                    <div class="container-fluid"><div class="row"><button type="button" class="btn btn-primary btn-default  " role="button">视频教学</button><button type="button" class="btn btn-danger btn-default" role="button">设备简介</button></div></div>
 
                 </div>
             </div>
@@ -209,16 +204,33 @@
         var introduction_code = "";
         var i = 3;
         for (var item in context) {
+            var url = context[item].url||"";
+            var sketch_heder= data[item_name].context[item].sketch_heder||"";
+            var sketch=context[item].sketch||"";
+            var video_url=video_url||"";
+            var detail_url=data[item_name].context[item].detail_url||"";
             if (i === 3) {
-                introduction_code = introduction_code + '<div id="info_" class="col-xs-12 col-md-3 col-sm-12 col-lg-3 col-md-offset-1 col-lg-offset-1 ">' +
-                        '<div class="thumbnail"> <img data-src="holder.js/300x300" alt="..." src="' + context[item].url + '">' +
-                        '  <div class="caption"><h3>'+context[item].sketch_heder+'</h3><p> '+context[item].sketch+'</p> <div class="container-fluid"> <div class="row"> <button type="button" class="btn btn-primary btn-default  " role="button">视频教学</button> <button type="button" class="btn btn-danger btn-default" role="button">设备简介</button> </div> </div></div>' + '</div>' + '</div>';
+                introduction_code = introduction_code +
+                        '<div id="info_'+item+'" class="col-xs-12 col-md-3 col-sm-12 col-lg-3 col-md-offset-1 col-lg-offset-1 ">' +
+                        '<div class="thumbnail"> <img data-src="holder.js/300x300" alt="..." src="' + url +'">'+
+                        '<div class="caption"><h3>'+sketch_heder+'</h3><p> '+sketch+'</p>'+
+                        '<div class="container-fluid"> <div class="row">'+
+                        '<a style="margin-right: 5px" type="button" href="'+video_url+'" class="btn btn-primary btn-default" role="button">视频教学</a>'+
+                        '<a type="button" href="'+detail_url+'" class="btn btn-danger btn-default" role="button">设备简介</a> </div></div></div>' +
+                        '</div>'+
+                        '</div>';
 
                 i--;
             } else {
-                introduction_code = introduction_code + '<div id="info_" class="col-xs-12 col-md-3 col-sm-12 col-lg-3 ">' +
-                        '<div class="thumbnail"> <img data-src="holder.js/300x300" alt="..." src="' + context[item].url + '">' +
-                        '  <div class="caption"><h3>'+context[item].sketch_heder+'</h3><p> '+context[item].sketch+'</p> <div class="container-fluid"> <div class="row"> <button type="button" class="btn btn-primary btn-default  " role="button">视频教学</button> <button type="button" class="btn btn-danger btn-default" role="button">设备简介</button> </div> </div></div>' + '</div>' + '</div>';
+                introduction_code = introduction_code +
+                        '<div id="info_'+item+'" class="col-xs-12 col-md-3 col-sm-12 col-lg-3 ">' +
+                        '<div class="thumbnail"> <img data-src="holder.js/300x300" alt="..." src="' + url +'">'+
+                        '<div class="caption"><h3>'+sketch_heder+'</h3><p> '+sketch+'</p>'+
+                        '<div class="container-fluid"> <div class="row">'+
+                        '<a style="margin-right: 5px" type="button" href="'+video_url+'" class="btn btn-primary btn-default" role="button">视频教学</a>'+
+                        '<a type="button" href="'+detail_url+'" class="btn btn-danger btn-default" role="button">设备简介</a> </div></div></div>' +
+                        '</div>'+
+                        '</div>';
                 i--;
 
 
@@ -233,10 +245,15 @@
 
     var set_table = function (data, item_name) {
         var context = data[item_name].context;
+
         //默认第一行不是表头  表头我在这添加的
         var table_code = '<div class="table-responsive"> <table class="table table-hover" style="background:beige"> <tr> <th>实验室设备名称</th> <th>设备编号</th> <th>设备使用情况</th> <th>设备详情</th> </tr>';
         for (var item in context) {
-            table_code = table_code + "<tr>" + "<td>" + context[item].name + "</td>" + "<td>" + context[item].number + "</td>" + "<td>" + context[item].status + "</td>" + "<td>" + "<a href=" + context[item].url + ">了解详情</a>" + "</td>" + "</tr>";
+            var name=context[item].name||"";
+            var number=context[item].number||"";
+            var status=context[item].status||"";
+            var url=context[item].url||"";
+            table_code = table_code + "<tr>" + "<td>" + name + "</td>" + "<td>" + number + "</td>" + "<td>" + status + "</td>" + "<td>" + "<a href=" + url + ">了解详情</a>" + "</td>" + "</tr>";
         }
         table_code = table_code + " </table> </div>";
         return table_code;

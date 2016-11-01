@@ -4,6 +4,8 @@
 
 var until_page=0;
 var click_count=1;
+var bind_name = 'input propertychange';
+
 var set_center = function () {
     var div_height = $("#Whole_form").height() / 2;
     var window_hight = $(window).height() / 2;
@@ -108,11 +110,11 @@ $("#pre").click(function () {
 });
 
 var signin_status=false;
-$("#std_or_teacher_id").keyup(function () {
-    var id_re = /^\d{10}$/;
+$("#std_or_teacher_id").bind(bind_name,function () {
+    var id_re = /^\d{8}$/;
     var id = $("#std_or_teacher_id").val();
     if(!id_re.test(id)){
-        $("#signin_tip").text("请输入10位的学号或学工号").show(100);
+        $("#signin_tip").text("请输8位的学号或学工号").show(100);
         signin_status=false
     }else {
         $("#signin_tip").hide(100);
@@ -120,7 +122,10 @@ $("#std_or_teacher_id").keyup(function () {
     }
 });
 
-$("#form_password").keyup(function () {
+
+
+
+$("#form_password").bind(bind_name, function () {
     var password_re=/^\w{6,20}$/;
     var password=$("#form_password").val();
     if(!password_re.test(password)){
@@ -131,7 +136,7 @@ $("#form_password").keyup(function () {
     }
 });
 
-$("#form_password_agin").keyup(function () {
+$("#form_password_agin").bind(bind_name, function () {
     var password=$("#form_password").val();
     var password_again=$("#form_password_agin").val();
     var password_re=/^\w{6,20}$/;
@@ -150,7 +155,7 @@ $("#form_password_agin").keyup(function () {
     }
 });
 
-$("#form_telephone").keyup(function () {
+$("#form_telephone").bind(bind_name, function () {
     var telephone_re=/^1[34578]\d{9}$/;
     var phonenumber=$("#form_telephone").val();
     if (!telephone_re.test(phonenumber)){
@@ -162,7 +167,7 @@ $("#form_telephone").keyup(function () {
     }
 });
 
-$("#form_email").keyup(function () {
+$("#form_email").bind(bind_name, function () {
     var email_re=/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
     var email= $("#form_email").val();
     var telephone_re=/^1[34578]\d{9}$/;

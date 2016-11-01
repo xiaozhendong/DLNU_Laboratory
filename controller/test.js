@@ -36,17 +36,23 @@ var test=async (ctx,next)=> {
                 {
                     "url": "images/Cyclone%20IV%20GX.jpg",
                     "sketch_heder": "FPGA",
-                    "sketch": "FPGA（Field－Programmable Gate Array），即现场可编程门阵列，它是在PAL、GAL、CPLD等可编程器件的基础上进一步发展的产物。它是作为专用集成电路（ASIC）领域中的一种半定制电路而出现的，既解决了定制电路的不足，又克服了原有可编程器件门电路数有限的缺点。"
+                    "sketch": "FPGA（Field－Programmable Gate Array），即现场可编程门阵列，它是在PAL、GAL、CPLD等可编程器件的基础上进一步发展的产物。它是作为专用集成电路（ASIC）领域中的一种半定制电路而出现的，既解决了定制电路的不足，又克服了原有可编程器件门电路数有限的缺点。",
+                    "video_url":"http://www.baidu.com",
+                    "detail_url":"http://www.baidu.com"
                 },
                 {
                     "url": "images/Cyclone%20IV%20GX.jpg",
                     "sketch_heder": "FPGA",
-                    "sketch": "FPGA（Field－Programmable Gate Array），即现场可编程门阵列，它是在PAL、GAL、CPLD等可编程器件的基础上进一步发展的产物。它是作为专用集成电路（ASIC）领域中的一种半定制电路而出现的，既解决了定制电路的不足，又克服了原有可编程器件门电路数有限的缺点。"
+                    "sketch": "FPGA（Field－Programmable Gate Array），即现场可编程门阵列，它是在PAL、GAL、CPLD等可编程器件的基础上进一步发展的产物。它是作为专用集成电路（ASIC）领域中的一种半定制电路而出现的，既解决了定制电路的不足，又克服了原有可编程器件门电路数有限的缺点。",
+                    "video_url":"http://www.baidu.com",
+                    "detail_url":"http://www.baidu.com"
                 },
                 {
                     "url": "images/Cyclone%20IV%20GX.jpg",
                     "sketch_heder": "FPGA",
-                    "sketch": "FPGA（Field－Programmable Gate Array），即现场可编程门阵列，它是在PAL、GAL、CPLD等可编程器件的基础上进一步发展的产物。它是作为专用集成电路（ASIC）领域中的一种半定制电路而出现的，既解决了定制电路的不足，又克服了原有可编程器件门电路数有限的缺点。"
+                    "sketch": "FPGA（Field－Programmable Gate Array），即现场可编程门阵列，它是在PAL、GAL、CPLD等可编程器件的基础上进一步发展的产物。它是作为专用集成电路（ASIC）领域中的一种半定制电路而出现的，既解决了定制电路的不足，又克服了原有可编程器件门电路数有限的缺点。",
+                    "video_url":"http://www.baidu.com",
+                    "detail_url":"http://www.baidu.com"
                 }
             ]
             //第一个时URL  第二个是正文内容
