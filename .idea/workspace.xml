@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="ae07c934-bd07-4149-9db5-edc8affbe29f" name="Default" comment="" />
+=======
+    <list default="true" id="ae07c934-bd07-4149-9db5-edc8affbe29f" name="Default" comment="">
+<<<<<<< HEAD
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+=======
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+>>>>>>> ec85030a95324f16342b1815f21e8645634af094
+    </list>
+>>>>>>> e0929d8837fa0f99b13e7ab4cac0af733900e02b
     <ignored path="Laborary_app.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -44,8 +55,18 @@
       <file leaf-file-name="navbar_footer_base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/abstract/navbar_footer_base.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1650">
               <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="32" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="45">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+=======
+            <state relative-caret-position="30">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+>>>>>>> ec85030a95324f16342b1815f21e8645634af094
+>>>>>>> e0929d8837fa0f99b13e7ab4cac0af733900e02b
               <folding />
             </state>
           </provider>
@@ -258,8 +279,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
       <pane id="Scratches" />
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+>>>>>>> ec85030a95324f16342b1815f21e8645634af094
+>>>>>>> e0929d8837fa0f99b13e7ab4cac0af733900e02b
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -278,6 +305,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+<<<<<<< HEAD
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Laborary_app" />
@@ -394,6 +422,15 @@
           </PATH>
         </subPane>
       </pane>
+=======
+        </subPane>
+      </pane>
+<<<<<<< HEAD
+      <pane id="Scratches" />
+=======
+>>>>>>> ec85030a95324f16342b1815f21e8645634af094
+      <pane id="Scope" />
+>>>>>>> e0929d8837fa0f99b13e7ab4cac0af733900e02b
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -416,9 +453,15 @@
       <recent name="$PROJECT_DIR$/view/abstract" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+<<<<<<< HEAD
       <recent name="$PROJECT_DIR$/static/js" />
       <recent name="$PROJECT_DIR$/controller" />
       <recent name="$PROJECT_DIR$" />
+=======
+      <recent name="$PROJECT_DIR$/controller" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/static/js" />
+>>>>>>> e0929d8837fa0f99b13e7ab4cac0af733900e02b
       <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
@@ -520,14 +563,30 @@
       <workItem from="1477667555623" duration="700000" />
       <workItem from="1477705816817" duration="30765000" />
       <workItem from="1477789575557" duration="5441000" />
+<<<<<<< HEAD
       <workItem from="1477885336713" duration="13720000" />
       <workItem from="1477981428655" duration="21935000" />
       <workItem from="1478013584304" duration="9000" />
+=======
+<<<<<<< HEAD
+      <workItem from="1477883074888" duration="1451000" />
+=======
+      <workItem from="1477885336713" duration="221000" />
+>>>>>>> ec85030a95324f16342b1815f21e8645634af094
+>>>>>>> e0929d8837fa0f99b13e7ab4cac0af733900e02b
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="252266000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="218053000" />
+=======
+    <option name="totallyTimeSpent" value="216823000" />
+>>>>>>> ec85030a95324f16342b1815f21e8645634af094
+>>>>>>> e0929d8837fa0f99b13e7ab4cac0af733900e02b
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -553,7 +612,15 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34210527" sideWeight="0.4968701" order="2" side_tool="false" content_ui="tabs" />
+=======
+<<<<<<< HEAD
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3425926" sideWeight="0.4968701" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3425926" sideWeight="0.4968701" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> ec85030a95324f16342b1815f21e8645634af094
+>>>>>>> e0929d8837fa0f99b13e7ab4cac0af733900e02b
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -826,9 +893,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/management/manage_base.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="266">
           <caret line="133" column="85" selection-start-line="133" selection-start-column="85" selection-end-line="133" selection-end-column="85" />
           <folding />
+=======
+        <state relative-caret-position="435">
+          <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="61" />
+>>>>>>> e0929d8837fa0f99b13e7ab4cac0af733900e02b
         </state>
       </provider>
     </entry>
@@ -954,6 +1026,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/jquery.charactercounter.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="480">
           <caret line="32" column="271" selection-start-line="32" selection-start-column="271" selection-end-line="32" selection-end-column="271" />
           <folding>
@@ -982,6 +1055,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="45">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+=======
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+>>>>>>> ec85030a95324f16342b1815f21e8645634af094
+>>>>>>> e0929d8837fa0f99b13e7ab4cac0af733900e02b
           <folding />
         </state>
       </provider>
