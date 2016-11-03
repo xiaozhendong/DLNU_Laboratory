@@ -1,0 +1,83 @@
+{% extends 'management/manage_base.html' %}
+
+{% block body %}
+<div id="manage_content" class="col-xs-12 col-sm-9 col-md-9 col-lg-9 ">
+    <div class="my_fix_content" style="overflow-y: scroll;max-height: 100px;">
+
+        <ul class="breadcrumb" style="margin-top:10px;margin-bottom:0px">
+            <li><h2><strong style="color:#00BCD4">添加项目信息</strong></h2></li>
+            <li>添加成员</li>
+        </ul>
+
+
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-offset-1">
+            <label for="Labor_member_name">名称</label>
+            <input id="Labor_member_name" type="text" class="form-control"
+                   placeholder="请输入名称">
+            <div class="form-group" style="margin-top: 15px" >
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="gender1" value="man">男
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="gender2" value="woman">女
+                </label>
+            </div>
+            <label for="Labor_member_birthday">出生日期</label>
+            <input id="Labor_member_birthday" type="text" class="form-control" placeholder="示例：1995/11/20">
+            <label for="Labor_member_hobby">爱好</label>
+            <input id="Labor_member_hobby" type="text" class="form-control">
+            <label for="Labor_member_context" style="margin-top: 10px">个人说明</label>
+            <textarea id="Labor_member_context" rows="15"
+                      placeholder="输入项目介绍（少于600字符[300个汉字]）"
+                      style="width: 100%;border-radius:4px;border: 1px solid #ccc;"></textarea>
+            <div style="width: 100%;margin-top: 10px;">
+                <a style="height:34px;float: right;margin-top: 10px" class="btn btn-default btn-primary">添加成员</a>
+            </div>
+
+        </div>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}
+{% block script %}
+<script src="js/jquery.charactercounter.js"></script>
+<script>
+
+    $(function () {
+        $(".xzd a").css("color", "#5c5c5c");
+        set_fix_heigh();
+
+        $('.my_fix_content').niceScroll({
+            cursorcolor: "#ccc",//#CC0071 光标颜色
+            cursoropacitymax: 1, //改变不透明度非常光标处于活动状态（scrollabar“可见”状态），范围从1到0
+            touchbehavior: false, //使光标拖动滚动像在台式电脑触摸设备
+            cursorwidth: "1px", //像素光标的宽度
+            cursorborder: "0", // 游标边框css定义
+            cursorborderradius: "5px",//以像素为光标边界半径
+            autohidemode: true//是否隐藏滚动条
+        });
+        $('#Labor_member_context').characterCounter(600);
+    });
+    var set_fix_heigh = function () {
+
+        var screen_height = $(window).height();
+        var bar_height = $("#serive-bar").height();
+        var content_heigh = screen_height - bar_height;
+        $(".my_fix_content").css("max-height", content_heigh);
+        var table_max_width = $(".panel.panel-success").width();
+        $(".table").css("max-width", table_max_width);
+        if ($(window).width() > 768) {
+            $("#manage_content").css("padding", "0px 0px");
+        } else {
+            $("#manage_content").css("padding", "15px 15px");
+        }
+    };
+    $(window).resize(function () {
+        set_fix_heigh()
+        $('#Labor_member_context').characterCounter(600);
+    });
+
+</script>
+{% endblock %}

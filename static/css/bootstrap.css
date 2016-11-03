@@ -2493,7 +2493,7 @@ _:-ms-fullscreen.input-lg,
 .radio-inline + .radio-inline,
 .checkbox-inline + .checkbox-inline {
   margin-top: 0;
-  margin-left: 10px;
+  margin-left:0px;
 }
 input[type="radio"][disabled],
 input[type="checkbox"][disabled],

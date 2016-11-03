@@ -2801,7 +2801,7 @@ _:-ms-fullscreen.input-lg, :root input[type=date].input-lg, _:-ms-fullscreen.inp
 
 .radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {
     margin-top: 0;
-    margin-left: 10px
+    margin-left: 0px
 }
 
 input[type=radio][disabled], input[type=checkbox][disabled], input[type=radio].disabled, input[type=checkbox].disabled, fieldset[disabled] input[type=radio], fieldset[disabled] input[type=checkbox] {
