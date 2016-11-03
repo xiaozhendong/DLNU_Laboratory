@@ -3,46 +3,44 @@
 {% block body %}
 <div id="manage_content" class="col-xs-12 col-sm-9 col-md-9 col-lg-9 ">
     <div class="my_fix_content" style="overflow-y: scroll;max-height: 100px;">
-
         <ul class="breadcrumb" style="margin-top:10px;margin-bottom:0px">
             <li><h2><strong style="color:#00BCD4">添加设备信息</strong></h2></li>
             <li>首页简介</li>
         </ul>
-        <div class="row">
-            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-md-offset-1 col-sm-offset-1 col-sm-offset-1">
-                <form id="">
-                    <label for="Labor_info_pic" style="margin-top: 10px">首页简介图片</label>
-                    <input id="Labor_info_pic" type="text"
-                           name="form_id"
-                           placeholder="输入图片url"
-                           class="form-control">
-                    <label for="Labor_info_header" style="margin-top: 10px">首页简介标题</label>
-                    <input id="Labor_info_header" type="text"
-                           name="form_id"
-                           placeholder="输入首页简介的标题"
-                           class="form-control">
-                    <label for="Labor_info_context" style="margin-top: 10px">首页简介内容</label>
-                    <textarea id="Labor_info_context" rows="15"
-                              placeholder="输入首页设备简介（少于300字符）"
-                              style="width: 100%;border-radius:4px;border: 1px solid #ccc;"></textarea>
-                    <label for="Labor_info_video" style="margin-top: 10px">首页简介视频索引</label>
-                    <input id="Labor_info_video" type="text"
-                           name="form_id"
-                           placeholder="输入首页视频的url"
-                           class="form-control">
-                    <label for="Labor_info_detail" style="margin-top: 10px">首页简介设备详情索引</label>
-                    <input id="Labor_info_detail" type="text"
-                           name="form_id"
-                           placeholder="输入首页设备详情url"
-                           class="form-control">
-                    <div style="width: 100%;">
-                        <button type="button" class="btn btn-primary " id="Labor_Info_upload"
-                                style="float:right;margin-top: 15px;margin-bottom: 15px">
-                            <span class="glyphicon glyphicon-cloud-upload"></span> 上传并生成简介
-                        </button>
-                    </div>
-                </form>
-            </div>
+
+        <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-md-offset-1 col-sm-offset-1 col-sm-offset-1">
+            <form id="">
+                <label for="Labor_info_pic" style="margin-top: 10px">首页简介图片</label>
+                <input id="Labor_info_pic" type="text"
+                       name="form_id"
+                       placeholder="输入图片url"
+                       class="form-control">
+                <label for="Labor_info_header" style="margin-top: 10px">首页简介标题</label>
+                <input id="Labor_info_header" type="text"
+                       name="form_id"
+                       placeholder="输入首页简介的标题"
+                       class="form-control">
+                <label for="Labor_info_context" style="margin-top: 10px">首页简介内容</label>
+                <textarea id="Labor_info_context" rows="15"
+                          placeholder="输入首页设备简介（少于300字符）"
+                          style="width: 100%;border-radius:4px;border: 1px solid #ccc;"></textarea>
+                <label for="Labor_info_video" style="margin-top: 10px">首页简介视频索引</label>
+                <input id="Labor_info_video" type="text"
+                       name="form_id"
+                       placeholder="输入首页视频的url"
+                       class="form-control">
+                <label for="Labor_info_detail" style="margin-top: 10px">首页简介设备详情索引</label>
+                <input id="Labor_info_detail" type="text"
+                       name="form_id"
+                       placeholder="输入首页设备详情url"
+                       class="form-control">
+                <div style="width: 100%;">
+                    <button type="button" class="btn btn-primary " id="Labor_Info_upload"
+                            style="float:right;margin-top: 15px;margin-bottom: 15px">
+                        <span class="glyphicon glyphicon-cloud-upload"></span> 上传并生成简介
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -53,6 +51,9 @@
 
 
 <script>
+    var Up_load_labor_skecth=function () {
+
+    };
     //ajax异步提交代码
 </script>
 <script>
@@ -91,6 +92,7 @@
     };
     $(window).resize(function () {
         set_fix_heigh()
+        $('#Labor_info_context').characterCounter(300);
 
     });
 

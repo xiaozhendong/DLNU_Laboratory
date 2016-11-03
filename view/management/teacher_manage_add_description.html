@@ -8,97 +8,43 @@
             <li>添加设备说明</li>
         </ul>
 
-        <div class="container-fluid" style="margin-top: 10px">
+
+        <div class="container-fluid" >
             <div style="float: right;margin-bottom: 15px">
-                <a href="http://localhost/teacher_manage_upload_detail" type="button" class="btn btn-primary ">
-                    <span class="glyphicon glyphicon-cloud-upload"></span> 本地视频与图片上传
+                <a href="http://localhost/teacher_manage_upload_detail" target="_blank">
+                    本地视频与图片上传>>
                 </a>
             </div>
         </div>
 
-        <div id="editor-container" class="container">
-            <div id="editor-trigger"></div>
-            <!-- <textarea id="editor-trigger" style="display:none;">
-                <p>请输入内容...</p>
-            </textarea> -->
-        </div>
 
-        <div class="container-fluid" style="margin-top: 10px">
-            <div style="float: right">
-                <button type="button" class="btn btn-primary ">
-                    <span class="glyphicon glyphicon-cloud-upload"></span> 上传
-                </button>
-                <button type="button" class="btn btn-primary ">
-                    <span class="glyphicon glyphicon-th"></span> 预览
-                </button>
+            <label for="Labor_detail_heading" style="margin-left: 15px">标题</label>
+            <input id="Labor_detail_heading" type="text" style="margin-bottom: 10px"
+                   name="heading"
+                   placeholder="输入标题"
+                   class="form-control">
+
+        <label for="editor-container" style="margin-top: 5px;margin-left: 15px">正文</label>
+            <div id="editor-container" class="container">
+                <div id="editor-trigger"></div>
+                <!-- <textarea id="editor-trigger" style="display:none;">
+                    <p>请输入内容...</p>
+                </textarea> -->
             </div>
-        </div>
 
 
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="margin-top: 15px">
-            <div class="panel panel-success">
-                <div class="panel-heading">
-                    最近上传图片
-                    <div class="my_panel_title"><a href="http://localhost/teacher_manage_upload_detail">上传与更多>></a>
-                    </div>
-                </div>
-                <div class="table-responsive">
-                    <table class="table ">
-                        <tr>
-                            <th>图片名称</th>
-
-                            <th>URL</th>
-                        </tr>
-                        <tr>
-                            <td>FPGA说明</td>
-                            <td>2016/06/13</td>
-                        <tr>
-                            <td>FPGA说明</td>
-                            <td>2016/06/13</td>
-                        </tr>
-
-                        <tr>
-                            <td>FPGA说明</td>
-                            <td>2016/06/13</td>
-                        </tr>
-                    </table>
+            <div class="container-fluid" style="margin-top: 10px;margin-bottom: 15px">
+                <div style="float: right">
+                    <button type="button" class="btn btn-primary ">
+                        <span class="glyphicon glyphicon-cloud-upload"></span> 上传
+                    </button>
+                    <button type="button" class="btn btn-primary ">
+                        <span class="glyphicon glyphicon-th"></span> 预览
+                    </button>
                 </div>
             </div>
 
 
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="margin-top: 15px">
-            <div class="panel panel-success">
-                <div class="panel-heading">
-                    最近上传视频
-                    <div class="my_panel_title"><a href="http://localhost/teacher_manage_upload_detail">上传与更多>></a>
-                    </div>
-                </div>
-                <div class="table-responsive">
-                    <table class="table ">
-                        <tr>
-                            <th>视频名称</th>
-                            <th>URL</th>
-                        </tr>
-                        <tr>
-                            <td>FPGA说明</td>
-                            <td>2016/06/13</td>
-                        <tr>
-                            <td>FPGA说明</td>
-                            <td>2016/06/13</td>
-                        </tr>
-
-                        <tr>
-                            <td>FPGA说明</td>
-                            <td>2016/06/13</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-
-        </div>
 
     </div>
 </div>
@@ -146,6 +92,10 @@
     editor.create();
 </script>
 <script>
+    var set_heading_width=function () {
+        $("#Labor_detail_heading").css("width",$(".wangEditor-container").width());
+        $("#Labor_detail_heading").css("margin-left","15px")
+    };
     $(function () {
         $(".xzd a").css("color", "#5c5c5c");
         set_fix_heigh();
@@ -159,6 +109,7 @@
             cursorborderradius: "5px",//以像素为光标边界半径
             autohidemode: true//是否隐藏滚动条
         });
+        set_heading_width()
 
     });
     var set_fix_heigh = function () {
@@ -177,7 +128,7 @@
     };
     $(window).resize(function () {
         set_fix_heigh()
-
+        set_heading_width()
     });
 
 </script>
