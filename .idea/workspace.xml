@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae07c934-bd07-4149-9db5-edc8affbe29f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/management.js" afterPath="$PROJECT_DIR$/controller/management.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/css/amazeui.min.css" afterPath="$PROJECT_DIR$/static/assets/css/amazeui.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/bootstrap.css" afterPath="$PROJECT_DIR$/static/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/management/teacher_manage_add_Lab_project_item.html" afterPath="$PROJECT_DIR$/view/management/teacher_manage_add_Lab_project_item.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/management/teacher_manage_add_Labo_info.html" afterPath="$PROJECT_DIR$/view/management/teacher_manage_add_Labo_info.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/management/teacher_manage_add_description.html" afterPath="$PROJECT_DIR$/view/management/teacher_manage_add_description.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/management/teacher_manage_add_item.html" afterPath="$PROJECT_DIR$/view/management/teacher_manage_add_item.html" />
-    </list>
+    <list default="true" id="ae07c934-bd07-4149-9db5-edc8affbe29f" name="Default" comment="" />
     <ignored path="Laborary_app.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
